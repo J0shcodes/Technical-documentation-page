@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/19f0e03037.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav id="navbar">
+    <header>Bootstrap Documentation</header>
+    <a href="#quick_start" class="nav-link">Quick start</a>
+
+    <a href="#css" class="nav-link">CSS</a>
+
+    <a href="#js" class="nav-link">JS</a>
+
+    <a href="#bundle" class="nav-link">Bundle</a>
+
+    <a href="#separate" class="nav-link">Separate</a>
+
+    <a href="#modules" class="nav-link">Modules</a>
+
+    <a href="#starter_template" class="nav-link">Starter template</a>
+
+    <a href="#important_globals" class="nav-link">Important globals</a>
+
+    <a href="#html5_doctype" class="nav-link">HTML5 doctype</a>
+
+    <a href="#responsive_meta_tag" class="nav-link">Responsive meta tag</a>
+
+    <a href="#box-sizing" class="nav-link">Box-sizing</a>
+
+    <a href="#reboot" class="nav-link">Reboot</a>
+
+    <a href="#community" class="nav-link">Community</a>
+
+    <a href="#reference" class="nav-link">Reference</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header>Introduction</header>
+      <p>Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with jsDelivr and a template starter page.</p>
+    </section>
+
+    <section class="main-section" id="quick_start">
+      <header>Quick start</header>
+      <p>Looking to quickly add Bootstrap to your project? Use jsDelivr, a free open source CDN. Using a package manager or need to download the source files? <a href="https://getbootstrap.com/docs/5.0/getting-started/download/">Head to the downloads page.</a></p>
+    </section>
+
+    <section class="main-section" id="css">
+      <header>CSS</header>
+      <p>Copy-paste the stylesheet <span style="color: brown;">&lt;link&gt;</span> into your <span style="color: brown;">&lt;head&gt;</span> before all other stylesheets to load our CSS.</p>
+      <pre class="over">
+        <code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"&gt;</code>
+      </pre>
+    </section>
+
+    <section class="main-section" id="js">
+      <header>JS</header>
+    <p>Many of our components require the use of JavaScript to function. Specifically, they require our own JavaScript plugins and <a href="https://popper.js.org/">Popper</a>. Place one of following <span style="color: brown;">&lt;script&gt;</span>s near the end of your pages, right before the closing <span style="color: brown;">&lt;body&gt;</span> tag, to enable them.</p>
+    </section>
+    <section class="main-section" id="bundle">
+      <header>Bundle</header>
+      <p>Include every Bootstrap JavaScript plugin and dependency with one of our two bundles. Both <span style="color: deeppink;">bootstrap.bundle.js</span> and <span style="color: deeppink;">bootstrap.bundle.min.js</span> include <a href="https://popper.js.org/">Popper</a> for our tooltips and popovers. For more information about what’s included in Bootstrap, please see our <a href="https://getbootstrap.com/docs/5.0/getting-started/contents/#precompiled-bootstrap">contents</a> section.</p>
+      <pre class="over">
+        <code>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">&lt;/script&gt;</code>
+      </pre>
+    </section>
+    <section class="main-section" id="separate">
+      <header>Separate</header>
+      <p>If you decide to go with the separate scripts solution, Popper must come first (if you’re using tooltips or popovers), and then our JavaScript plugins.</p>
+      <pre class="over">
+        <code>&lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">&lt;/script&gt;
+        &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">&lt;/script&gt;</code>
+      </pre>
+    </section>
+
+    <section class="main-section" id="modules">
+      <header>Modules</header>
+      <p>If you use <span style="color: brown;">&lt;script type="module"&gt;</span>, please refer to our <a href="https://getbootstrap.com/docs/5.0/getting-started/javascript/#using-bootstrap-as-a-module">using Bootstrap as a module</a> section.</p>
+    </section>
+
+    <section class="main-section" id="starter_template">
+      <header>Starter template</header>
+      <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:</p>
+      <pre class="over">
+        <code>&lt;!doctype html&gt;
+        &lt;html lang="en"&gt;
+          &lt;head>
+            &lt;!-- Required meta tags --&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+          
+            &lt;!-- Bootstrap CSS --&gt;
+            &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"&gt;
+          
+            &lt;title>Hello, world!&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body>
+            &lt;h1>Hello, world!&lt;/h1&gt;
+          
+            &lt;!-- Optional JavaScript; choose one of the two! --&gt;
+          
+            &lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;
+            &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">&lt;/script&gt;
+          
+            &lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;
+            &lt;!--
+            &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">&lt;/script&gt;
+            &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">&lt;/script&gt;
+            --&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;</code>
+      </pre>
+    </section>
+
+    <section class="main-section" id="important_globals">
+      <header>Important globals</header>
+      <p>Bootstrap employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the normalization of cross browser styles. Let’s dive in.</p>
+    </section>
+
+    <section class="main-section" id="html5_doctype">
+      <header>HTML5 doctype</header>
+      <p>Bootstrap requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.</p>
+      <pre>
+        <code>&lt;!doctype html&gt;
+        &lt;html lang="en">
+          ...
+        &lt;/html&gt;</code>
+      </pre>
+    </section>
+
+    <section class="main-section" id="responsive_meta_tag">
+      <header>Responsive meta tag</header>
+      <p>Bootstrap is developed mobile first, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <span style="font-weight: bold;">add the responsive viewport meta tag</span> to your <span style="color: brown;">&lt;head&gt;</span>.</p>
+      <pre>
+        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>
+      </pre>
+      <p>You can see an example of this in action in the <a href="#">starter template</a>.</p>
+    </section>
+
+    <section class="main-section" id="box-sizing">
+      <header>Box-sizing</header>
+      <p>For more straightforward sizing in CSS, we switch the global <span style="color: deeppink;">box-sizing</span> value from <span style="color: deeppink;">content-box</span> to <span style="color: deeppink;">border-box</span>. This ensures <span style="color: deeppink;">padding</span> does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
+     <p>On the rare occasion you need to override it, use something like the following:</p>
+     <pre>
+      <code>.selector-for-some-widget {
+          box-sizing: content-box;
+      }</code>
+    </pre>
+    <p>With the above snippet, nested elements—including generated content via <span style="color: deeppink;">::before</span> and <span style="color: deeppink;">::after</span>—will all inherit the specified <span style="color: deeppink;">box-sizing</span> for that <span style="color: deeppink;">.selector-for-some-widget</span>.</p>
+    <p>Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
+    </section>
+
+    <section class="main-section" id="reboot">
+      <header>Reboot</header>
+      <p>For improved cross-browser rendering, we use <a href="https://getbootstrap.com/docs/5.0/content/reboot/">Reboot</a> to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.</p>
+    </section>
+
+    <section class="main-section" id="community">
+      <header>Community</header>
+      <p>Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
+      <p>
+        <ul>
+          <li>Follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a>.</li>
+          <li>Read and subscribe to <a href="https://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li>
+          <li>Join <a href="https://bootstrap-slack.herokuapp.com/">the official Slack room</a>.</li>
+          <li>Chat with fellow Bootstrappers in IRC. On the <span style="color: deeppink;">irc.freenode.net</span> server, in the <span style="color: deeppink;">##bootstrap</span> channel.</li>
+          <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-5">bootstrap-5</a>).</li>
+          <li>Developers should use the keyword <span style="color: deeppink;">bootstrap</span> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/search?q=keywords:bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
+        </ul>
+        <p>You can also follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
+      </p>
+    </section>
+
+    <section class="main-section" id="reference">
+      <header>Reference</header>
+      <p>All the documentation in this page was taken from <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template">Get Bootstrap</a>.</p>
+    </section>
+
+    <hr>
+
+  <footer>
+  <div class="contact">
+    <a href="https://github.com/J0shcodes">
+      <span class="icons"><i class="fa fa-github"></i></span></a>
+    <a href="https://twitter.com/JPhleg">
+      <span class="icons"><i class="fa fa-twitter"></i></span></a>
+  </div>
+  <p>&copy; 2020 Joshua Moses</p>
+  </footer>
+  </main>
+</body>
+</html>
